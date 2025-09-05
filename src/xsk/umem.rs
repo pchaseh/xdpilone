@@ -363,6 +363,8 @@ impl Umem {
     }
 }
 
+unsafe impl Sync for Umem {}
+
 impl DeviceQueue {
     /// Get the statistics of this XDP socket.
     #[deprecated = "Consider using `statistics_v2` for additional statistics exposed on >= Linux 5.9"]
